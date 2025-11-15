@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import RetentionSection from "@/components/RetentionSection";
 import ReviewsSection from "@/components/ReviewsSection";
 import VideoSection from "@/components/VideoSection";
+import PricingSection from "@/components/PricingSection";
 
 export default function Index() {
   return (
@@ -10,6 +11,7 @@ export default function Index() {
       <RetentionSection />
       <ReviewsSection />
       <VideoSection />
+      <PricingSection />
     </main>
   );
 }
