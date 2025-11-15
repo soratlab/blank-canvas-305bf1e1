@@ -8,7 +8,7 @@ import Footer from "@/components/Footer";
 
 export default function Index() {
   return (
-    <main className="bg-background text-foreground">
+    <main className="bg-background text-foreground w-full overflow-x-hidden">
       <Hero />
       <RetentionSection />
       <ReviewsSection />
