@@ -2,112 +2,98 @@ import React from "react";
 
 export default function PricingSection() {
   return (
-    <section className="w-full flex flex-col items-center text-center mt-32 px-4">
+    <section className="section-gap bg-black py-20">
+      <div className="container-main text-center flex flex-col items-center">
 
-      {/* Título */}
-      <h2 className="font-sora font-semibold text-[28px] md:text-[32px] text-black leading-tight">
-        Escolha seu plano
-      </h2>
+        {/* Título */}
+        <h2 className="font-sora font-semibold text-[28px] md:text-[32px] leading-tight text-white">
+          Escolha o plano ideal<br />
+          <span className="text-[#E4F64A]">para sua criação.</span>
+        </h2>
 
-      {/* Subtexto */}
-      <p className="font-sora text-[15px] text-[#7A7A7A] max-w-[600px] mt-3 leading-relaxed">
-        Planos simples, transparentes e sem pegadinhas.
-      </p>
+        {/* Subtexto */}
+        <p className="font-sora text-[15px] text-gray-300 mt-3 leading-relaxed max-w-[600px]">
+          Planos flexíveis para criadores, editores e marcas que querem usar IA para melhorar vídeos.
+        </p>
 
-      {/* Grid de planos */}
-      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-14 max-w-[1100px] w-full">
+        {/* Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full mt-16">
 
-        {/* === Plano 1 — Starter === */}
-        <div className="bg-white border border-[#E6E6E6] rounded-2xl p-6 shadow-sm flex flex-col">
-          <h3 className="font-sora font-semibold text-[18px] text-black">Starter</h3>
-          <p className="text-[13px] text-[#7A7A7A] mt-1">Para iniciantes</p>
+          {/* Plano 1 */}
+          <div className="bg-[#1A1A1A] rounded-2xl p-8 text-left border border-[#2A2A2A]">
+            <h3 className="font-sora text-[20px] text-white font-semibold">
+              Básico
+            </h3>
+            <p className="text-gray-400 text-[14px] mt-2">
+              Ideal para criadores iniciantes.
+            </p>
 
-          <div className="mt-4">
-            <span className="font-sora font-bold text-[28px] text-black">R$ 59,90</span>
-            <span className="text-[13px] text-[#7A7A7A]">/mês</span>
+            <p className="text-white font-semibold text-[28px] mt-6">
+              R$ 29<span className="text-[14px] text-gray-400">/mês</span>
+            </p>
+
+            <ul className="mt-6 space-y-2 text-gray-300 text-[14px]">
+              <li>✔ 5 análises por mês</li>
+              <li>✔ Gráficos de retenção</li>
+              <li>✔ Sugestões automáticas</li>
+            </ul>
+
+            <button className="mt-8 w-full bg-[#E4F64A] text-black font-sora font-semibold py-2 rounded-full hover:bg-[#d6e842] transition">
+              Começar
+            </button>
           </div>
 
-          <ul className="text-left text-[13px] text-[#5A5A5A] mt-4 flex-1">
-            <li>• 20 análises/mês</li>
-            <li>• Insights básicos</li>
-            <li>• Suporte por email</li>
-          </ul>
+          {/* Plano 2 — DESTAQUE */}
+          <div className="bg-[#E4F64A] rounded-2xl p-8 text-left shadow-lg border border-[#F0FF86]">
+            <h3 className="font-sora text-[20px] text-black font-semibold">
+              Profissional
+            </h3>
+            <p className="text-[#3A3A3A] text-[14px] mt-2">
+              Para quem quer crescer rápido.
+            </p>
 
-          <button className="mt-6 bg-black text-[#E4F64A] py-2 rounded-full font-sora text-[14px] hover:opacity-90 transition">
-            Começar
-          </button>
+            <p className="text-black font-semibold text-[28px] mt-6">
+              R$ 79<span className="text-[14px] text-[#4E4E4E]">/mês</span>
+            </p>
+
+            <ul className="mt-6 space-y-2 text-[#2F2F2F] text-[14px]">
+              <li>✔ 25 análises por mês</li>
+              <li>✔ Prioridade de processamento</li>
+              <li>✔ Detecção avançada de emoção</li>
+              <li>✔ Comparador com vídeos virais</li>
+            </ul>
+
+            <button className="mt-8 w-full bg-black text-[#E4F64A] font-sora font-semibold py-2 rounded-full hover:opacity-90 transition">
+              Assinar agora
+            </button>
+          </div>
+
+          {/* Plano 3 */}
+          <div className="bg-[#1A1A1A] rounded-2xl p-8 text-left border border-[#2A2A2A]">
+            <h3 className="font-sora text-[20px] text-white font-semibold">
+              Ilimitado
+            </h3>
+            <p className="text-gray-400 text-[14px] mt-2">
+              Para equipes, agências e marcas.
+            </p>
+
+            <p className="text-white font-semibold text-[28px] mt-6">
+              R$ 149<span className="text-[14px] text-gray-400">/mês</span>
+            </p>
+
+            <ul className="mt-6 space-y-2 text-gray-300 text-[14px]">
+              <li>✔ Análises ilimitadas</li>
+              <li>✔ IA avançada</li>
+              <li>✔ Relatórios completos</li>
+              <li>✔ Suporte prioritário</li>
+            </ul>
+
+            <button className="mt-8 w-full bg-[#E4F64A] text-black font-sora font-semibold py-2 rounded-full hover:bg-[#d6e842] transition">
+              Começar agora
+            </button>
+          </div>
+
         </div>
-
-        {/* === Plano 2 — Pro (Destacado) === */}
-        <div className="relative bg-black text-white rounded-2xl p-6 shadow-xl flex flex-col border-2 border-[#E4F64A]">
-
-          {/* Selo “Popular” */}
-          <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#E4F64A] text-black text-[11px] font-bold px-3 py-1 rounded-full shadow">
-            Popular
-          </div>
-
-          <h3 className="font-sora font-semibold text-[18px]">Pro</h3>
-          <p className="text-[13px] text-[#CFCFCF] mt-1">Para criadores sérios</p>
-
-          <div className="mt-4">
-            <span className="font-sora font-bold text-[28px] text-white">R$ 99,90</span>
-            <span className="text-[13px] text-[#CFCFCF]">/mês</span>
-          </div>
-
-          <ul className="text-left text-[13px] text-[#CFCFCF] mt-4 flex-1">
-            <li>• 80 análises/mês</li>
-            <li>• Insights avançados</li>
-            <li>• Relatórios detalhados</li>
-            <li>• Suporte rápido</li>
-          </ul>
-
-          <button className="mt-6 bg-[#E4F64A] text-black py-2 rounded-full font-sora text-[14px] hover:brightness-95 transition">
-            Começar agora
-          </button>
-        </div>
-
-        {/* === Plano 3 — Studio === */}
-        <div className="bg-white border border-[#E6E6E6] rounded-2xl p-6 shadow-sm flex flex-col">
-          <h3 className="font-sora font-semibold text-[18px] text-black">Studio</h3>
-          <p className="text-[13px] text-[#7A7A7A] mt-1">Para equipes de produção</p>
-
-          <div className="mt-4">
-            <span className="font-sora font-bold text-[28px] text-black">R$ 199,90</span>
-            <span className="text-[13px] text-[#7A7A7A]">/mês</span>
-          </div>
-
-          <ul className="text-left text-[13px] text-[#5A5A5A] mt-4 flex-1">
-            <li>• Análises ilimitadas</li>
-            <li>• IA colaborativa</li>
-            <li>• Painel para equipes</li>
-            <li>• Suporte prioritário</li>
-          </ul>
-
-          <button className="mt-6 bg-black text-[#E4F64A] py-2 rounded-full font-sora text-[14px] hover:opacity-90 transition">
-            Assinar Studio
-          </button>
-        </div>
-
-        {/* === Plano 4 — Enterprise === */}
-        <div className="bg-white border border-[#E6E6E6] rounded-2xl p-6 shadow-sm flex flex-col">
-          <h3 className="font-sora font-semibold text-[18px] text-black">Enterprise</h3>
-          <p className="text-[13px] text-[#7A7A7A] mt-1">Para organizações</p>
-
-          <div className="mt-4">
-            <span className="font-sora font-bold text-[28px] text-black">Custom</span>
-          </div>
-
-          <ul className="text-left text-[13px] text-[#5A5A5A] mt-4 flex-1">
-            <li>• Treinamento dedicado</li>
-            <li>• Consultoria personalizada</li>
-            <li>• SLA corporativo</li>
-          </ul>
-
-          <button className="mt-6 bg-black text-[#E4F64A] py-2 rounded-full font-sora text-[14px] hover:opacity-90 transition">
-            Falar com vendas
-          </button>
-        </div>
-
       </div>
     </section>
   );
