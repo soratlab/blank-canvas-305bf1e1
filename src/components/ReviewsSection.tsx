@@ -1,5 +1,3 @@
-Cole exatamente assim:
-
 import React from "react";
 
 export default function ReviewsSection() {
