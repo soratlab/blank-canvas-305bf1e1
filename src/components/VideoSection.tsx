@@ -1,36 +1,53 @@
 import React from "react";
+import Reveal from "./Reveal";
 
 export default function VideoSection() {
   return (
-    <section className="w-full flex flex-col items-center text-center mt-32 px-4">
-      
-      {/* Título */}
-      <h2 className="font-sora font-semibold text-[28px] md:text-[32px] leading-tight text-black max-w-[700px]">
-        Veja sua análise em ação
-      </h2>
+    <section className="section-gap">
+      <div className="container-main flex flex-col items-center text-center">
 
-      {/* Subtexto */}
-      <p className="font-sora text-[15px] text-[#868686] mt-3 max-w-[600px] leading-relaxed">
-        A IA destaca momentos críticos, aponta quedas de retenção e sugere correções imediatas.
-      </p>
+        {/* Título */}
+        <Reveal>
+          <h2 className="font-sora font-semibold text-[28px] md:text-[32px] leading-tight text-black">
+            Veja sua análise na prática.
+          </h2>
+        </Reveal>
 
-      {/* Container do vídeo */}
-      <div className="w-full max-w-[900px] mt-10">
-        <div className="relative w-full overflow-hidden rounded-2xl bg-[#EDEDED] shadow-md aspect-video flex items-center justify-center">
+        {/* Subtexto */}
+        <Reveal delay={0.1}>
+          <p className="font-sora text-[15px] text-[#868686] mt-3 max-w-[600px] leading-relaxed">
+            A IA gera uma análise visual clara e direta, mostrando exatamente onde ajustar.
+          </p>
+        </Reveal>
 
-          {/* Botão de play */}
-          <button className="h-20 w-20 rounded-full bg-black bg-opacity-80 flex items-center justify-center hover:scale-110 transition">
-            <span className="text-[#E4F64A] text-4xl">▶️</span>
-          </button>
+        {/* PLAYER / VIDEO MOCK */}
+        <Reveal delay={0.2}>
+          <div
+            className="
+              w-full 
+              max-w-[920px] 
+              h-[380px] 
+              md:h-[480px]
+              bg-gradient-to-b from-[#F4F4F4] to-[#DEDEDE]
+              rounded-2xl 
+              mt-14
+              shadow-[0_6px_20px_rgba(0,0,0,0.10)]
+              border border-[#DCDCDC]
+              flex items-center justify-center
+            "
+          >
+            <div className="flex items-center justify-center flex-col">
+              <div className="h-16 w-16 rounded-full bg-black flex items-center justify-center shadow-lg">
+                <div className="h-0 w-0 border-t-[12px] border-b-[12px] border-l-[20px] border-t-transparent border-b-transparent border-l-white ml-[4px]"></div>
+              </div>
 
-        </div>
+              <p className="font-sora text-[13px] text-[#7A7A7A] mt-4">
+                Prévia da análise de vídeo
+              </p>
+            </div>
+          </div>
+        </Reveal>
       </div>
-
-      {/* Texto abaixo do vídeo */}
-      <p className="font-sora text-[14px] text-[#7A7A7A] mt-4 max-w-[600px]">
-        Este é um exemplo de como a Sorat.ai identifica padrões e sugere melhorias em segundos.
-      </p>
-
     </section>
   );
 }
