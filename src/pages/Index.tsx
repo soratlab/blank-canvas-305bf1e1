@@ -3,6 +3,7 @@ import RetentionSection from "@/components/RetentionSection";
 import ReviewsSection from "@/components/ReviewsSection";
 import VideoSection from "@/components/VideoSection";
 import PricingSection from "@/components/PricingSection";
+import FAQSection from "@/components/FAQSection";
 
 export default function Index() {
   return (
@@ -12,6 +13,7 @@ export default function Index() {
       <ReviewsSection />
       <VideoSection />
       <PricingSection />
+      <FAQSection />
     </main>
   );
 }
