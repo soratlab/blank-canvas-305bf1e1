@@ -6,7 +6,8 @@ export default function RetentionSection() {
 
       {/* Título */}
       <h2 className="font-sora font-semibold text-[28px] md:text-[32px] leading-tight text-black max-w-[700px]">
-        Aumente retenção. <span className="text-[#E4F64A]">Melhore impacto.</span>
+        Aumente retenção.{" "}
+        <span className="text-[#E4F64A]">Melhore impacto.</span>
       </h2>
 
       {/* Subtexto */}
@@ -16,56 +17,56 @@ export default function RetentionSection() {
       </p>
 
       {/* Ícones principais */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-14 max-w-[1000px] w-full">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mt-14 max-w-[1000px] w-full">
 
         {/* Item 1 — HOOK */}
-        <div className="flex flex-col items-center">
-          <div className="h-14 w-14 rounded-xl bg-black flex items-center justify-center">
+        <div className="flex flex-col items-center text-center">
+          <div className="h-14 w-14 rounded-xl bg-black flex items-center justify-center shadow-md">
             <span className="text-[#E4F64A] text-[20px] font-bold">⚡</span>
           </div>
           <p className="font-sora font-semibold text-[14px] text-black mt-3">
             Hook
           </p>
-          <span className="block text-[12px] text-[#7A7A7A] mt-1 max-w-[140px]">
+          <span className="block text-[12px] text-[#7A7A7A] mt-1 max-w-[150px]">
             Identifica início fraco e sugere abertura mais forte.
           </span>
         </div>
 
         {/* Item 2 — RITMO */}
-        <div className="flex flex-col items-center">
-          <div className="h-14 w-14 rounded-xl bg-black flex items-center justify-center">
+        <div className="flex flex-col items-center text-center">
+          <div className="h-14 w-14 rounded-xl bg-black flex items-center justify-center shadow-md">
             <span className="text-[#E4F64A] text-[20px] font-bold">🎵</span>
           </div>
           <p className="font-sora font-semibold text-[14px] text-black mt-3">
             Ritmo
           </p>
-          <span className="block text-[12px] text-[#7A7A7A] mt-1 max-w-[140px]">
+          <span className="block text-[12px] text-[#7A7A7A] mt-1 max-w-[150px]">
             Analisa cortes lentos e sugere ritmo ideal.
           </span>
         </div>
 
         {/* Item 3 — EMOÇÃO */}
-        <div className="flex flex-col items-center">
-          <div className="h-14 w-14 rounded-xl bg-black flex items-center justify-center">
+        <div className="flex flex-col items-center text-center">
+          <div className="h-14 w-14 rounded-xl bg-black flex items-center justify-center shadow-md">
             <span className="text-[#E4F64A] text-[20px] font-bold">💛</span>
           </div>
           <p className="font-sora font-semibold text-[14px] text-black mt-3">
             Emoção
           </p>
-          <span className="block text-[12px] text-[#7A7A7A] mt-1 max-w-[140px]">
+          <span className="block text-[12px] text-[#7A7A7A] mt-1 max-w-[150px]">
             Mede onde o espectador perde interesse.
           </span>
         </div>
 
         {/* Item 4 — COMPARADOR */}
-        <div className="flex flex-col items-center">
-          <div className="h-14 w-14 rounded-xl bg-black flex items-center justify-center">
+        <div className="flex flex-col items-center text-center">
+          <div className="h-14 w-14 rounded-xl bg-black flex items-center justify-center shadow-md">
             <span className="text-[#E4F64A] text-[20px] font-bold">📊</span>
           </div>
           <p className="font-sora font-semibold text-[14px] text-black mt-3">
             Comparador
           </p>
-          <span className="block text-[12px] text-[#7A7A7A] mt-1 max-w-[140px]">
+          <span className="block text-[12px] text-[#7A7A7A] mt-1 max-w-[150px]">
             Compara desempenho com vídeos similares.
           </span>
         </div>
