@@ -57,6 +57,10 @@ body {
   @apply bg-background text-foreground;
   font-family: "Sora", sans-serif;
   overflow-x: hidden;
+
+  /* suavização premium */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 /* remover highlight feio mobile */
@@ -71,14 +75,25 @@ body {
 }
 
 /* -------------------------------
-   SISTEMA DE SEÇÃO (PADDING GLOBAL)
+   MICROTIPOGRAFIA (ajustes premium)
 -------------------------------- */
-.section-gap {
-  @apply mt-32 md:mt-40;
+p {
+  line-height: 1.55;
+}
+
+h1, h2, h3 {
+  letter-spacing: -0.015em;
 }
 
 /* -------------------------------
-   CONTAINER GLOBAL (limita largura)
+   SISTEMA DE SEÇÃO (padding vertical)
+-------------------------------- */
+.section-gap {
+  @apply mt-28 md:mt-40;
+}
+
+/* -------------------------------
+   CONTAINER GLOBAL (limite visual)
 -------------------------------- */
 .container-main {
   @apply max-w-[1200px] mx-auto px-6;
