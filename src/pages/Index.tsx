@@ -8,14 +8,29 @@ import Footer from "@/components/Footer";
 
 export default function Index() {
   return (
-    <main className="bg-background text-foreground w-full overflow-x-hidden">
+    <main className="bg-background text-foreground">
+
+      {/* HERO */}
       <Hero />
+
+      {/* RETENTION */}
       <RetentionSection />
+
+      {/* REVIEWS */}
       <ReviewsSection />
+
+      {/* VIDEO */}
       <VideoSection />
+
+      {/* PRICING */}
       <PricingSection />
+
+      {/* FAQ */}
       <FAQSection />
+
+      {/* FOOTER */}
       <Footer />
+      
     </main>
   );
 }
