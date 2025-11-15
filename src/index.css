@@ -3,71 +3,83 @@
 @tailwind utilities;
 
 /* -------------------------------
-   FONTES PERSONALIZADAS — SORA
+   FONTES SORA — TODAS AS VARIAÇÕES
 -------------------------------- */
 @font-face {
   font-family: "Sora";
   src: url("/fonts/Sora-Thin.ttf") format("truetype");
   font-weight: 100;
-  font-style: normal;
 }
-
 @font-face {
   font-family: "Sora";
   src: url("/fonts/Sora-ExtraLight.ttf") format("truetype");
   font-weight: 200;
-  font-style: normal;
 }
-
 @font-face {
   font-family: "Sora";
   src: url("/fonts/Sora-Light.ttf") format("truetype");
   font-weight: 300;
-  font-style: normal;
 }
-
 @font-face {
   font-family: "Sora";
   src: url("/fonts/Sora-Regular.ttf") format("truetype");
   font-weight: 400;
-  font-style: normal;
 }
-
 @font-face {
   font-family: "Sora";
   src: url("/fonts/Sora-Medium.ttf") format("truetype");
   font-weight: 500;
-  font-style: normal;
 }
-
 @font-face {
   font-family: "Sora";
   src: url("/fonts/Sora-SemiBold.ttf") format("truetype");
   font-weight: 600;
-  font-style: normal;
 }
-
 @font-face {
   font-family: "Sora";
   src: url("/fonts/Sora-Bold.ttf") format("truetype");
   font-weight: 700;
-  font-style: normal;
 }
-
 @font-face {
   font-family: "Sora";
   src: url("/fonts/Sora-ExtraBold.ttf") format("truetype");
   font-weight: 800;
-  font-style: normal;
 }
 
 /* -------------------------------
-   RESET GLOBAL + APLICAÇÃO DA FONTE
+   GLOBAL RESET & BODY
 -------------------------------- */
-* {
-  @apply border-border;
-  font-family: "Sora", sans-serif;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   @apply bg-background text-foreground;
+  font-family: "Sora", sans-serif;
+  overflow-x: hidden;
+}
+
+/* remover highlight feio mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Seleção do usuário */
+::selection {
+  background: #e4f64a;
+  color: #000;
+}
+
+/* -------------------------------
+   SISTEMA DE SEÇÃO (PADDING GLOBAL)
+-------------------------------- */
+.section-gap {
+  @apply mt-32 md:mt-40;
+}
+
+/* -------------------------------
+   CONTAINER GLOBAL (limita largura)
+-------------------------------- */
+.container-main {
+  @apply max-w-[1200px] mx-auto px-6;
+}
