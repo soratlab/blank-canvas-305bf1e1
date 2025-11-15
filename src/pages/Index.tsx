@@ -1,16 +1,9 @@
-import Header from "../components/Header"
-import Hero from "../components/Hero"
+import Hero from "@/components/Hero";
 
-const Index = () => {
+export default function Index() {
   return (
-    <>
-      <Header />
-
-      <main className="w-full pt-24">
-        <Hero />
-      </main>
-    </>
-  )
+    <main className="bg-background text-foreground">
+      <Hero />
+    </main>
+  );
 }
-
-export default Index
