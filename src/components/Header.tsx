@@ -1,50 +1,75 @@
-// src/components/Header.tsx
-import React from "react";
+"use client";
+
+import { useState } from "react";
+import NavLink from "@/components/NavLink";
 
 export default function Header() {
+  const [open, setOpen] = useState(false);
+
   return (
-    <header className="w-full fixed top-0 left-0 z-50 bg-transparent">
-      <nav className="max-w-[1200px] mx-auto px-6 py-4 flex items-center justify-between">
-        
-        {/* Left: logo */}
-        <div className="flex items-center gap-4">
-          <div className="flex items-center gap-3">
-            <div className="h-8 w-8 rounded-md flex items-center justify-center bg-black">
-              {/* mini logo temporário */}
-              <span className="text-[14px] text-[#E4F64A] font-bold">⚡</span>
-            </div>
-            <span className="font-sora font-semibold text-lg text-[#E4F64A] tracking-tight">
-              sorat.ai
-            </span>
+    <header className="
+      fixed top-0 left-0 w-full z-50
+      backdrop-blur-md bg-white/80
+      border-b border-[#E6E7E8]
+      transition
+    ">
+      <div className="max-w-[1200px] mx-auto px-6 py-4 flex justify-between items-center">
+
+        {/* LOGO */}
+        <div className="flex items-center gap-2 cursor-pointer">
+          <div className="h-8 w-8 rounded-md bg-[#E4F64A] flex items-center justify-center">
+            <span className="font-bold text-black text-[16px]">⚡</span>
           </div>
+          <span className="font-sora font-semibold text-[16px] text-black">
+            sorat.ai
+          </span>
         </div>
 
-        {/* Center nav links */}
-        <ul className="hidden md:flex items-center gap-8 text-sm font-sora text-[#414042]">
-          <li><a className="hover:opacity-80" href="#sobre">Sobre</a></li>
-          <li><a className="hover:opacity-80" href="#quem-somos">Quem somos</a></li>
-          <li><a className="hover:opacity-80" href="#funcionalidade">Funcionalidade</a></li>
-          <li><a className="hover:opacity-80" href="#planos">Planos</a></li>
-        </ul>
+        {/* MENU DESKTOP */}
+        <nav className="hidden md:flex items-center gap-8">
+          <NavLink href="#features">Funcionalidades</NavLink>
+          <NavLink href="#pricing">Planos</NavLink>
+          <NavLink href="#faq">FAQ</NavLink>
+          <button className="
+            bg-black text-[#E4F64A] px-4 py-2 rounded-full font-sora text-[14px]
+            hover:opacity-90 transition
+          ">
+            Rodar análise
+          </button>
+        </nav>
 
-        {/* Right side */}
-        <div className="flex items-center gap-3">
-          <a
-            href="#login"
-            className="hidden md:inline-block text-sm font-sora px-4 py-2 rounded-full border border-[#414042] text-[#414042] hover:opacity-90"
-          >
-            Entrar
-          </a>
+        {/* MENU MOBILE BOTÃO */}
+        <button
+          className="md:hidden text-black text-2xl"
+          onClick={() => setOpen(!open)}
+        >
+          {open ? "✕" : "☰"}
+        </button>
+      </div>
 
-          <a
-            href="#start"
-            className="inline-flex items-center justify-center px-4 py-2 rounded-full bg-[#E4F64A] hover:brightness-95 shadow-[0_8px_30px_rgba(228,246,74,0.12)] text-black font-sora font-semibold"
-            style={{ boxShadow: "0 10px 30px rgba(228,246,74,0.12)" }}
-          >
-            Começar
-          </a>
+      {/* MENU MOBILE */}
+      {open && (
+        <div className="md:hidden bg-white border-t border-[#E6E7E8] px-6 py-4 space-y-5">
+          <NavLink href="#features" onClick={() => setOpen(false)}>
+            Funcionalidades
+          </NavLink>
+
+          <NavLink href="#pricing" onClick={() => setOpen(false)}>
+            Planos
+          </NavLink>
+
+          <NavLink href="#faq" onClick={() => setOpen(false)}>
+            FAQ
+          </NavLink>
+
+          <button className="
+            w-full bg-black text-[#E4F64A] px-4 py-2 rounded-full font-sora text-[14px]
+            hover:opacity-90 transition
+          ">
+            Rodar análise
+          </button>
         </div>
-      </nav>
+      )}
     </header>
   );
 }
