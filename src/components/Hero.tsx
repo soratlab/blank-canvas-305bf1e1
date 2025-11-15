@@ -5,19 +5,23 @@ export default function Hero() {
     <section className="w-full flex flex-col items-center text-center mt-32 px-4">
 
       {/* Texto principal */}
-      <h1 className="font-sora font-semibold text-[32px] leading-tight text-[#000000] max-w-[780px]">
+      <h1 className="font-sora font-semibold text-[32px] leading-tight text-black max-w-[780px]">
         Direção criativa por IA: identifique<br />
         quedas de retenção e corrija na hora.
       </h1>
 
       {/* Subtexto */}
-      <p className="font-sora text-[15px] text-[#868686] mt-3 max-w-[600px]">
+      <p className="font-sora text-[15px] text-[#868686] mt-3 max-w-[600px] leading-relaxed">
         A inteligência artificial detecta momentos críticos no vídeo.<br />
         Substitua “achismo” por “precisão” em minutos.
       </p>
 
       {/* Botão */}
-      <button className="mt-6 bg-[#E4F64A] hover:bg-[#d6e842] transition text-[#000] font-sora font-semibold px-6 py-2 rounded-full text-[14px]">
+      <button
+        className="mt-6 bg-[#E4F64A] hover:bg-[#d6e842] transition-colors 
+                   text-black font-sora font-semibold px-6 py-2 
+                   rounded-full text-[14px]"
+      >
         Rodar análise grátis →
       </button>
 
@@ -26,7 +30,7 @@ export default function Hero() {
 
         {/* Card 1 */}
         <div className="bg-[#F5F5F5] rounded-xl p-6 shadow-sm">
-          <p className="font-sora font-semibold text-[14px] text-[#000]">
+          <p className="font-sora font-semibold text-[14px] text-black">
             1. Pega o impacto
           </p>
           <span className="block text-[12px] text-[#7A7A7A] mt-2">
@@ -34,9 +38,9 @@ export default function Hero() {
           </span>
         </div>
 
-        {/* Card 2 (verde destacado) */}
+        {/* Card 2 (verde destaque) */}
         <div className="bg-[#E4F64A] rounded-xl p-6 shadow-sm">
-          <p className="font-sora font-semibold text-[14px] text-[#000]">
+          <p className="font-sora font-semibold text-[14px] text-black">
             2. IA Inteligência
           </p>
           <span className="block text-[12px] text-[#4E4E4E] mt-2">
